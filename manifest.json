@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Hamed Text Replacer Pro",
+  "version": "2.0.0",
+  "description": "جایگزینی هوشمند متن در صفحات وب با قوانین قابل تنظیم.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Hamed Text Replacer Pro",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}
